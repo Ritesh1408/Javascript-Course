@@ -44,3 +44,4 @@ console.log(myN2);
 // but in case of splice, original array is manipulated and change the original array
 
 
+
