@@ -24,10 +24,14 @@ console.log(jsUser["Full name"]);
 console.log(jsUser[mySym]);
 
 jsUser.email = "ritesh@chatgpt.com"
-// Object.freeze(jsUser);
+
+//after using freeze, user can't change the objects details
+Object.freeze(jsUser);
+
 jsUser.email = "ritesh@microsoft.com"
 console.log(jsUser);
 
+//creating greeting function and how its accessible
 jsUser.greeting = function(){
     console.log("Hello JS User");
 }
