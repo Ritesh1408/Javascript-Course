@@ -56,13 +56,40 @@ console.log(tinder_1);
 
 // we can use keys and values, where the op is Array
 
-console.log(Object.keys(tinder_1));
-console.log(Object.values(tinder_1));
-console.log(Object.entries(tinder_1));
+// console.log(Object.keys(tinder_1));
+// console.log(Object.values(tinder_1));
+// console.log(Object.entries(tinder_1));
 
-console.log(tinder_1.hasOwnProperty('isLoggedIn'));
+// console.log(tinder_1.hasOwnProperty('isLoggedIn'));
 
-console.log('name' in tinder_1);
+// console.log('name' in tinder_1);
+
+//destructure objects
+
+const course = {
+    coursename : "Js in Hindi",
+    price : "999",
+    courseIntructor : "hitesh"
+}
+
+// course.courseIntructor
+
+const {courseIntructor : instruct} = course
+
+console.log(instruct);
+
+
+// API and JSON
+ {
+    "course" : "JS Hindi",
+    "intructor" : "Hitesh",
+    "price" : "of course free"
+ }
+
+ [
+    {},
+    {},
+ ]
 
 
 
