@@ -51,9 +51,16 @@ const user = {
 
 // no need to use return keyword
 // specially react
-const addtwoNum = (num1, num2) => (num1 + num2)
+// const addtwoNum = (num1, num2) => (num1 + num2)
+const addtwoNum = (num1, num2) => ({username : "hitesh"})
 
 console.log(addtwoNum(5,6));
+
+//array
+// const myarray = [2, 5 , 7 ,8]
+
+// myarray.forEach(function () {})
+// myarray.forEach( () => {})
 
 
 
