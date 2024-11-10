@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cerebox | DOM</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+
+    <ul class="language">
+        <li>JavaScript</li>
+        <li>Java</li>
+    </ul>
+    
+</body>
+
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage("Python");
+    addLanguage("C++");
+
+    // Another way to add element
+    // optimised and faster
+    function addlang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+        
+    }
+    addlang("C#");
+
+    //Edit element
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //secondLang.textContent = "Python";
+    const newli = document.createElement('li')
+    newli.textContent = "Ruby";
+    secondLang.replaceWith(newli);
+
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = "<li>Typescript</li>";
+
+
+    //Remove element
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove();
+
+
+
+
+</script>
+</html>
