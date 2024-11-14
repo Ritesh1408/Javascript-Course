@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id="stop">
+        STOP
+    </button>
+    <button id="start">
+        START
+    </button>
+</body>
+
+<script>
+    //setTimeout
+    //setinterval
+    const saymyName = function(){
+        console.log("Ritesh");
+        
+    }
+    const changeName = function(){
+        document.querySelector('h1').innerHTML = "You are the Best !!!"
+    }
+    // changeName()
+
+    let changeMe = setTimeout(changeName, 2000)
+    // clearTimeout(changeMe)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("Stopped");
+        
+    });
+
+    document.querySelector('#start').addEventListener('click', function(){
+        changeMe = setTimeout(changeName,2000)
+        // Reassign the timeout again after, to start again
+        console.log("Start Again");
+        
+    });
+
+
+</script>
+
+
+</html>
